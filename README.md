@@ -11,7 +11,7 @@ gets a set of skills as an output for this job. The model is trained to predict 
  
 - **The most challenging part** in this project is to construct the labels for the model. By processing the various excel files,
 we find at least 4000 labels, that can either be continious or categorical. Therefore, various statistical techniques were used in order
-to reduce the label space dimensionality (Pearson, Spearman, Cramer's V).
+to reduce the label space dimensionality (Pearson, Spearman, Cramer's V), and avoid large sparse matrices.
 
 
 ## :rocket: Repository Structure
