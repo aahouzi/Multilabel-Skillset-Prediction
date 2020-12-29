@@ -39,6 +39,12 @@ args = parser.parse_args()
 
 
 def get_model(tokenizer_obj, n):
+    """
+    Constructs & returns the base model used for predicting the skill sets.
+    :param tokenizer_obj: A tf.Keras tokenizer object.
+    :param n: Number of labels to predict.
+    :return: A tf.keras functional API model.
+    """
     # Size of the vocabulary
     vocab_size = len(tokenizer_obj.word_index) + 1
     # Dimension after padding sequences

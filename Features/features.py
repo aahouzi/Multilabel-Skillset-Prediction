@@ -30,6 +30,12 @@ nltk.download('stopwords')
 #                                  Main Code                                   #
 ################################################################################
 def text_preprocessor(df):
+    """
+    Apply basic text pre-processing steps (Removing stop words, punctuation,
+    stemming) on a pandas column dataframe.
+    :param df: A pandas column dataframe.
+    :return: A processed dataframe.
+    """
     # List of Stop words from nltk library
     nltk_stop_words = stopwords.words('english')
     porter = PorterStemmer()
@@ -48,7 +54,12 @@ def text_preprocessor(df):
 
 
 def get_features(path_to_dataset, save):
-
+    """
+    Encoding train/test sets for neural network training.
+    :param path_to_dataset: The path to the dataset.
+    :param save: 1 to save the tokenizer locally, 0 otherwise.
+    :return: Encoded train/test sets.
+    """
     # Open the dataset.
     df = pd.read_csv(path_to_dataset)
 
