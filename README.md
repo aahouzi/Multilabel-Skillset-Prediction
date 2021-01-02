@@ -21,9 +21,28 @@ the model is constructed from various excel sheet files.
 - **Features directory:** Implementation of various functions used for cleaning the text, and encoding it.
 - **Train directory:** Implementation of the GRU model, and training/evaluation process.
 - **App directory:** Code for the web application that was developed for the model deployment. It contains Flask API code for the Back-End,
-and HTML/CSS/Javascript code for the Front-End. I used **pythonanywhere** free hosting services to deploy my web app.
+and HTML/CSS/Javascript code for the Front-End. I used **pythonanywhere** free hosting services to deploy my web app, and it can be accessed directly via
+the following link: https://skillsgenerator.pythonanywhere.com/ .
+
 
 ![](https://j.gifs.com/jZz3gy.gif)
+
+## :chart_with_upwards_trend: Performance & results
+
+- The final dataset contains **973 samples**. Each sample contains a job description, and its corresponding labels.
+
+- The model used for this multilabel classification task is a GRU model with 180 cells, followed by 123 parallel dense layers with one neuron 
+and a sigmoid activation function each. This specific architecture will enable to predict each label or skill independently, and have a performance metric
+for each dense layer. After that, the total performance is the median of all test accuracies obtained across each output dense layer.
+
+- The metric used to measure the model's performance is **accuracy**. After testing the model, I obtained a test accuracy of **73%**, which is acceptable
+regarding the huge number of labels the model is predicting, and also the small size of the dataset.
+
+
+
+
+
+
 
 
 ---
