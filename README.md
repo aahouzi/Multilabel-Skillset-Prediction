@@ -20,6 +20,10 @@ The repository contains the following files & directories:
 the model is constructed from various excel sheet files.
 - **Features directory:** Implementation of various functions used for cleaning the text, and encoding it.
 - **Train directory:** Implementation of the GRU model, and training/evaluation process.
+- **App directory:** Code for the web application that was developed for the model deployment. It contains Flask API code for the Back-End,
+and HTML/CSS/Javascript code for the Front-End. I used **pythonanywhere** free hosting services to deploy my web app.
+
+![](https://j.gifs.com/jZz3gy.gif)
 
 
 ---
