@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block title %}
+<h4 class="mb-3" style="text-align:center;">Model prediction <p style="color:red">({{ m }} Tags)</p></h4>
+{% endblock %}
+
+{% block form %}
+
+<ul class="list-group" style="max-height: 200px;margin-bottom: 10px;overflow:scroll;">
+{% for skill in skills %}
+    <li class="list-group-item"><strong>{{ skill }}</strong></li>
+{% endfor %}
+
+</ul>
+
+<div class="form-group">
+  <form action="{{url_for('home')}}" enctype="multipart/form-data" method="post">
+    <div class="container-login100-form-btn p-t-25">
+        <button class="login100-form-btn">
+            Back to welcome page
+        </button>
+    </div>
+  </form>
+</div>
+
+
+{% endblock %}
+
+
